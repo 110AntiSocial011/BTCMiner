@@ -1,7 +1,7 @@
 import json
 import logging
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from typing import Optional, Set, List, Dict, Callable
 import csv
@@ -92,43 +92,43 @@ class Config:
     requests_per_minute: int = 60
     max_retries: int = 3
     derivation_path: str = "m/44'/0'/0'/0/0"
-    proxies: List[str] = None
+    proxies: List[str] = field(default_factory=list)
     batch_size: int = 1000
     checkpoint_interval: int = 5000
     export_format: str = "csv"
     database_file: str = "wallets.db"
     email_notifications: bool = False
-    email_recipients: List[str] = None
+    email_recipients: List[str] = field(default_factory=list)
     smtp_server: str = ""
     smtp_port: int = 0
     smtp_username: str = ""
     smtp_password: str = ""
-    cryptocurrencies: List[str] = ["BTC"]
+    cryptocurrencies: List[str] = field(default_factory=lambda: ["BTC"])
     logging_level: str = "INFO"
     max_addresses: int = 10000
-    api_headers: Dict[str, str] = None
+    api_headers: Dict[str, str] = field(default_factory=dict)
     ban_detection_string: str = None
     auto_proxy_switch: bool = False
-    address_types: List[str] = None
+    address_types: List[str] = field(default_factory=list)
     log_interval: int = 600  # Log statistics every 10 minutes
     redis_url: str = "redis://localhost"
     redis_ttl: int = 3600
     http2_enabled: bool = True
     metrics_port: int = 9090
     db_pool_size: int = 5
-    proxy_providers: List[str] = None
-    paths_per_coin: Dict[str, str] = None
+    proxy_providers: List[str] = field(default_factory=list)
+    paths_per_coin: Dict[str, str] = field(default_factory=dict)
     websocket_port: int = 8765
     enable_realtime_updates: bool = False
     redis_pool_size: int = 10
-    redis_sentinel_nodes: List[str] = None
-    custom_address_generators: Dict[str, str] = None
+    redis_sentinel_nodes: List[str] = field(default_factory=list)
+    custom_address_generators: Dict[str, str] = field(default_factory=dict)
     process_count: int = None
     gc_interval: int = 300
     memory_limit: int = None  # in MB
-    api_keys: List[str] = None
+    api_keys: List[str] = field(default_factory=list)
     api_key_rotation_interval: int = 3600
-    address_generator_plugins: List[str] = None
+    address_generator_plugins: List[str] = field(default_factory=list)
     tor_proxy: str = None
     proxy_check_interval: int = 3600
     proxy_timeout: int = 10
@@ -136,7 +136,7 @@ class Config:
     api_usage_log_interval: int = 600
     verify_address: bool = True
     proxy_score_threshold: int = 5
-    api_endpoints: Dict[str, str] = None
+    api_endpoints: Dict[str, str] = field(default_factory=dict)
     auto_update: bool = False
     update_url: str = "https://github.com/LizardX2/BTCMiner"
     checkpoint_file: str = "checkpoint.json"
