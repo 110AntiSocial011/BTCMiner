@@ -1,3 +1,36 @@
+Metadata-Version: 2.2
+Name: btcminer
+Version: 1.0.0
+Summary: Bitcoin seeds bruteforcer / checker
+Author: LizardX2
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: colorama
+Requires-Dist: hdwallet
+Requires-Dist: requests
+Requires-Dist: aioredis
+Requires-Dist: aiohttp
+Requires-Dist: aioh2
+Requires-Dist: aiosqlite
+Requires-Dist: prometheus_client
+Requires-Dist: psutil
+Requires-Dist: websockets
+Requires-Dist: ujson
+Requires-Dist: pika
+Requires-Dist: PySocks
+Requires-Dist: memory_profiler
+Requires-Dist: tqdm
+Requires-Dist: ratelimit
+Requires-Dist: backoff
+Requires-Dist: click
+Requires-Dist: pandas
+Requires-Dist: pycryptodome>=3.10.1
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+
 # Bitcoin Wallets Miner
 Bitcoin seeds bruteforcer / checker | First legit tool
 
