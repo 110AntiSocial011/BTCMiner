@@ -3,25 +3,27 @@
         "checker": {
             "filename": "check.txt"
         },
-
         "bruteforcer": {
-            "STRENGHT_OPTIONS": "128, 160, 228, 192, 224, 256",
-            "strenght": 128,
+            "STRENGTH_OPTIONS": "128, 160, 192, 224, 256",
+            "strength": 128,
             "LANGUAGE_OPTIONS": "english, french, italian, spanish, chinese_simplified, chinese_traditional, japanese, korean",
             "language": "english",
-            "passphere": "None"
+            "passphrase": "None"
         },
         "general": { 
             "failed": "failed.txt",
             "success": "success.txt",
             "ADDRESS_OPTIONS": "p2pkh, p2sh, p2wpkh, p2wpkh_in_p2sh, p2wsh, p2wsh_in_p2sh",
             "addresstype" : "p2pkh",
-                "api": {
-                    "api_url": "https://chain.api.btc.com/v3/address",
-                    "api_get_data": "data",
-                    "api_get_balance": "balance",
-                    "api_get_recieved": "received"
-                }
-            }
+            "api": {
+                "api_url": "https://chain.api.btc.com/v3/address",
+                "api_get_data": "data",
+                "api_get_balance": "balance",
+                "api_get_received": "received"
+            },
+            "redis_url": "redis://localhost",
+            "metrics_port": 9090,
+            "proxies": ["http://proxy1.example.com", "http://proxy2.example.com"]
         }
+    }
 }

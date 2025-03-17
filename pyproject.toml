@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "btcminer"
+version = "1.0.0"
+authors = [
+    {name = "LizardX2"},
+]
+description = "Bitcoin seeds bruteforcer / checker"
+readme = "README.md"
+requires-python = ">=3.9,<4"
+dependencies = [
+    "colorama",
+    "hdwallet",
+    "ecdsa",
+    "mnemonic",
+    "base58",
+    "redis>=4.3.0",  # Replace aioredis with redis which has asyncio support
+    "requests",
+    "aiohttp",
+    "aioh2",
+    "aiosqlite",
+    "prometheus_client",
+    "psutil",
+    "websockets",
+    "ujson",
+    "pika",
+    "PySocks",
+    "memory_profiler",
+    "tqdm",
+    "ratelimit",
+    "backoff",
+    "click",
+    "pandas",
+    "pycryptodome>=3.10.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-mock",
+    "pytest-cov",
+]

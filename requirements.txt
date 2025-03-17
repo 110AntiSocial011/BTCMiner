@@ -1,0 +1,23 @@
+colorama
+hdwallet==1.0.0
+ecdsa  # Required by hdwallet
+mnemonic  # Required by hdwallet
+base58  # Required by hdwallet
+pycryptodome>=3.10.1
+requests
+redis>=4.3.0  # Replace aioredis with redis which has asyncio support
+aiohttp
+aioh2
+aiosqlite
+prometheus_client
+psutil
+websockets
+ujson
+pika
+PySocks
+memory_profiler
+tqdm
+ratelimit
+backoff
+click
+pandas
